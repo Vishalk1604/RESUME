@@ -1,0 +1,482 @@
+
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+
+
+
+
+.container {
+    
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    background-color: rgb(230, 208, 191);
+    min-height: 1000px;
+    margin: 50px auto;
+    display: grid   ;
+    grid-template-columns: 1fr 2fr;
+    transition: box-shadow 0.3s ease;
+    border-radius: 20px;
+
+}
+.container .left_side {
+    position: relative;
+    background: rgb(132, 65, 10);
+    padding: 45px;
+   border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px
+}
+
+.profiletext {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border: none;
+}
+
+.profiletext::after {
+    content: '';
+    display: block;
+    width: 140%;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent 1%, rgb(195, 140, 98), transparent 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.profiletext .imgBx {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 6px double rgb(204, 154, 115);
+    overflow: hidden;
+    animation: floatAnimation 3s infinite ease-in-out; /* Adjust the animation duration as needed */
+}
+
+.profiletext .imgBx:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.profiletext .shadowBeneath {
+    position: absolute;
+    bottom: -4px; /* Adjust the distance from the bottom to control the shadow's position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px; /* Adjust the width based on the profile image's size */
+    height: 8px; /* Adjust the height based on the desired shadow size */
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.profiletext .imgWrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.profiletext .imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.profiletext h2 {
+    color: rgb(255, 225, 208);
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+
+}
+
+.profiletext h2 span {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.contactinfo {
+    padding-top: 20px;
+}
+
+.title {
+    color: rgb(224, 162, 124);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.contactinfo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contactinfo h5 {
+    position: relative;
+    cursor: pointer;
+}
+
+.contactinfo h5 .icon {
+    display: inline-block;
+    width: 25px;
+    font-size: 20px;
+    color: rgb(255, 225, 208);
+}
+
+.contactinfo h5 span {
+    color: hsl(0, 0%, 100%);
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+.education {
+    padding-top: 20px;
+}
+
+.education h5 .something {
+    font-size: 20px;
+    color: rgb(255, 225, 208);
+    font-weight: bold;
+}
+
+.education h5 span {
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+.skillsigot {
+    padding-top: 20px;
+}
+
+.skillsigot span {
+    font-size: 20px;
+    color: rgb(255, 225, 208);
+    font-weight: bold;
+}
+
+.skillsigot .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: bisque;
+    display: block;
+    margin-top: 5px;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+    transform-origin: left;
+}
+
+.skillsigot .percent:hover {
+    transform: scale(1.07);
+}
+
+.skillsigot .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(94, 58, 10);
+    border-radius: 3px;
+}
+
+
+
+.container .right_side {
+    position: relative;
+    background-color: rgb(140, 77, 25);
+    padding: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;  
+
+}
+
+.about {
+    margin-bottom: 50px;
+
+}
+
+.about .title2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(239, 195, 146);
+    text-decoration: underline;
+}
+
+.about p {
+    position: relative;
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+
+
+.about ul {
+    list-style: none;
+
+}
+
+.about .icon {
+    display: inline-block;
+    width: 20px;
+    font-size: 20px;
+    color: #9C5000;
+}
+
+.about span {
+    font-size: 20px;
+    color: #9C5000;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.about:last-child {
+    margin-bottom: 0;
+}
+
+.title2 {
+    color: rgb(124, 124, 3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: sandybrown;
+}
+
+.box {
+    background-color: antiquewhite;
+    padding: 5px;
+    height: auto;
+    width: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+.box ul li {
+    transition: transform 0.3s ease;
+}
+
+.interest-images {
+    display: block;
+    color: #9C5000;
+}
+
+.imgRover img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+   
+    width: auto;
+    max-width: 1200px;
+    z-index: 1000;
+    display: flex;
+    border: 3.5px double rgb(133, 88, 56)e;
+    justify-content: space-between;
+    padding: 10px 5px;
+    background-color: rgba(166, 106, 71, 0.8);
+    box-sizing: border-box;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+
+.navbar a {
+    color: white;
+    background-color: #9f6335;
+    text-align: center;
+    text-decoration: none;
+    border: 3px solid #7b4d29;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(20px); 
+}
+
+.navbar a:hover {
+    background-color: #90592f;
+  color: #ffffff;
+  box-shadow: 0px 0px 5px #90592f, 0px 0px 25px #90592f, 0px 0px 50px #90592f, 0px 0px 100px #90592f;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); 
+    transform: scale(1.1);
+
+}
+
+.navbar.transparent {
+    background-color: rgb(255, 241, 224);
+}
+
+section {
+    margin-top: 16px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the buttons */
+.dropdown-button,
+.cooking-button {
+    background-color: #4caf4f00;
+    color: white;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    vertical-align: top;
+    /* Space between buttons */
+    transition: margin-top 0.3s ease-in-out;
+    /* Add transition for smooth movement */
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    /* Position it at the bottom of the button */
+    left: 0;
+    width: 500%;
+    z-index: 1;
+    opacity: 0;
+    transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Style for the images in the dropdown */
+.dropdown-content img {
+    width: 400%;
+    height: auto;
+    display: block;
+}
+
+.dropdown sub{
+    font-size: 10px;
+}
+
+
+
+.list-box {
+    position: relative;
+  
+    padding: 0px;
+    border-radius: 10px;
+
+}
+
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+}
+
+/* Style for table cells */
+td {
+    width: 3px;
+    border-width: 5px;
+}
+
+/* Larger cells */
+.large-cell {
+    height: 50%;
+}
+
+/* Smaller cells */
+.small-cell {
+    width: 60%;
+    height: 300px;
+}
+
+.dropdown-content table img {
+   max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+    display: block; /* Ensure images don't add extra spacing */
+}
+
+
+
+/*::-webkit-scrollbar {
+    width: 12px; 
+
+::-webkit-scrollbar-thumb {
+    background-color: #3498db; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f2f2f2; 
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2980b9; 
+}*/
+
+
+
+::-webkit-scrollbar {
+    width: 0;
+}
+#scrollbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 12px; /* Set the width of the scrollbar */
+    height: 100vh; /* Set the height of the scrollbar to fill the viewport */
+    background-color: #f2f2f2; /* Set the background color of the scrollbar */
+   /* Hide any content overflowing the scrollbar */
+}
+
+#scrollpath {
+    height: 100%; /* Make the scroll path fill the entire height of the scrollbar */
+    background-color: #4e3307; /* Set the color of the scroll path */
+}
+
+#progressbar {
+    height: 0; /* Initial height of the progress bar */
+    background: linear-gradient(to bottom, #798997, #00ffe7); /* Set the color of the progress bar */
+    transition: height 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+
+
+
+ 

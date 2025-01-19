@@ -1,0 +1,69 @@
+body {
+    animation: theme 21s linear infinite;
+    display: flex;
+    place-content: center;
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        width: 100vw;  
+        height: 100vh; 
+        width: 100vmax;
+        height: 100vmax;
+        background: rgba(0,0,0,0.05);
+        animation: background 90s linear infinite;
+    }
+
+    &:after {
+        left: 15vw;
+    }
+
+    &:before {
+        right: 15vw;
+        animation-delay: -30s;
+        animation-direction: reverse;
+    }
+}
+
+@keyframes theme {
+    0% {
+        background: #FDF7E4;
+    }
+    
+    16% {
+        background: #FAEED1;
+    }
+    
+    33% {
+        background: #DED0B6;
+    }
+    
+    50% {
+        background: #BBAB8C;
+    }
+    
+    66% {
+        background: #FDF7E4;
+    }    
+    
+    83% {
+        background: #FAEED1;
+    }
+
+    100% {
+        background: #DED0B6;
+    }
+}
+
+@keyframes background {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
